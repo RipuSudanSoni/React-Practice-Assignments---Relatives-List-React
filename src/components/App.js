@@ -1,23 +1,39 @@
-import React, {Component, useState} from "react";
+//import React, {Component, useState} from "react";
+import React from "react";
 import '../styles/App.css';
 
-class App extends Component {
-    render() {
-        const arr = ["Ripu", "Nipu", "Prince", "Bala ji"];
+// class App extends Component {
+//     render() {
+//         const arr = ["Ripu", "Nipu", "Prince", "Bala ji"];
+//         let name = arr.map((item, index) => {
+//             return <li key = {index}> {index} {item} </li>
+//         },1)
+
+//         return(
+//             <div id="main">
+//                {/* Do not remove the main div */}
+//                <ol>
+//                    {name}
+//                </ol>
+//             </div>
+//         )
+//     }
+// }
+ function App() {
+    const arr = ["Ripu", "Nipu", "Prince", "Bala ji","Chhotu"];
         let name = arr.map((item, index) => {
-            return <li key = {index}> {index} {item} </li>
-        })
+             return <li key = {index}> {item} </li>
+         })
+         console.log({name});
+         console.log(typeof(name));
 
-        return(
-            <div id="main">
-               {/* Do not remove the main div */}
-               <ol>
-                   {name}
-               </ol>
-            </div>
-        )
-    }
-}
-
+    return (
+        <>
+            <ol>
+                {name}
+            </ol>
+        </>
+    )
+ }
 
 export default App;
