@@ -3,15 +3,16 @@ import '../styles/App.css';
 
 class App extends Component {
     render() {
+        const arr = ["Ripu", "Nipu", "Prince", "Bala ji"];
+        let name = arr.map((item, index) => {
+            return <li key = {index}> {index} {item} </li>
+        })
 
         return(
             <div id="main">
                {/* Do not remove the main div */}
                <ol>
-                   <li>Ripu Sudan Soni</li>
-                   <li>Nipu Soni</li>
-                   <li>Prince Soni</li>
-                   <li>Bala ji Soni</li>
+                   {name}
                </ol>
             </div>
         )
