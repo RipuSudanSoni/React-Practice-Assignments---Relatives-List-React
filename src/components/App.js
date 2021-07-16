@@ -20,9 +20,11 @@ import '../styles/App.css';
 //     }
 // }
  function App() {
+     let str = "relativeListItem";
+
     const arr = ["Ripu", "Nipu", "Prince", "Bala ji","Chhotu"];
         let name = arr.map((item, index) => {
-             return <li key = {index}> {item} </li>
+             return <li key ={` ${str} +${index + 1}`}> {item} </li>
          })
          console.log({name});
          console.log(typeof(name));
