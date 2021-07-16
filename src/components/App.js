@@ -24,14 +24,14 @@ import '../styles/App.css';
 
     const arr = ["Ripu", "Nipu", "Prince", "Bala ji","Chhotu"];
         let name = arr.map((item, index) => {
-             return <li key ={` ${str} +${index + 1}`}> {item} </li>
+             return <li key ={`${str}+${index + 1}`}> {item} </li>
          })
          console.log({name});
          console.log(typeof(name));
 
     return (
         <>
-            <ol>
+            <ol key = "relativeOrderList">
                 {name}
             </ol>
         </>
