@@ -20,15 +20,19 @@ import '../styles/App.css';
 //     }
 // }
  function App() {
-     let str = "relativeListItem";
 
     const arr = ["Ripu", "Nipu", "Prince", "Bala ji","Chhotu"];
-        let name = arr.map((item, index) => {
-             return <li key ={`${str}` + `${index+ 1}`}> {item} </li>
+
+        let count = 0;
+
+        let name = arr.map((item) => {
+            ++count;
+            let keyvalue = `relativeListItem${count}`;
+             return <li key ={keyvalue}> {item} </li>
          })
-         console.log({name});
-         console.log(typeof(name));
-         console.log(`${str}` + `${index+ 1}`);
+         console.log(name);
+         //console.log(keyvalue);
+         //console.log(`${str}` + `${index+ 1}`);
 
     return (
         <>
