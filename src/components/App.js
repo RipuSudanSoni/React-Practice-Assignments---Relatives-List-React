@@ -36,7 +36,7 @@ import '../styles/App.css';
 
     return (
         <>
-            <ol key = "relativeOrderList">
+            <ol key = "relativeList">
                 {name}
             </ol>
         </>
